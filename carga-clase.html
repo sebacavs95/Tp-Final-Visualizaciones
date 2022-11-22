@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CEL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../Tp Final Visualizaciones/css/estilos.css">
+<link rel="stylesheet" href="../Tp Final Visualizaciones/css/carga.css">
+</head>
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top" id="carga-clase">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">CEL</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="login.html" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i> LOGIN</a>
+      <a href="perfil.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> MI PERFIL</a>
+      <a href="carga-clase.html" class="w3-bar-item w3-button"><i class="fa fa-cloud-upload"></i> CARGAR CLASE</a>
+      <a href="alumnos.html" class="w3-bar-item w3-button"><i class="fa fa-users"></i> LISTADO ALUMNOS</a>
+      <a href="enviar.html" class="w3-bar-item w3-button"><i class="fa fa-paper-plane-o"></i> ENVIAR CLASE</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+  <a href="login.html" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
+  <a href="perfil.html" onclick="w3_close()" class="w3-bar-item w3-button">MI PERFIL</a>
+  <a href="carga-clase.html" onclick="w3_close()" class="w3-bar-item w3-button">CARGAR CLASE</a>
+  <a href="alumnos.html" onclick="w3_close()" class="w3-bar-item w3-button">LISTADO ALUMNOS</a>
+  <a href="enviar.html" onclick="w3_close()" class="w3-bar-item w3-button">ENIVAR CLASE</a>
+</nav>
+
+<h2 style="margin-top: 2em;">Formulario de Carga de Contenidos</h2>
+
+
+<div class="container">
+  <form action="#" onsubmit="(e)=>e.preventDefault()" >
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Nombre del Contenido</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="cont" name="contenido" placeholder="El nombre del contenido es..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Institución</label>
+    </div>
+    <div class="col-75">
+      <select id="institucion" name="institucion">
+        <option value="australia">Universidad Nacional de La Matanza</option>
+        <option value="canada">Universidad Nacional de San Martin</option>
+        <option value="usa">Universidad de Buenos Aires</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Materia</label>
+    </div>
+    <div class="col-75">
+      <select id="materia" name="materia">
+        <option value="australia">Matemáticas</option>
+        <option value="canada">Economía</option>
+        <option value="usa">Física</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Explicación</label>
+    </div>
+    <div class="col-75">
+      <textarea id="explicacion" name="explicacion" placeholder="Escriba aqui.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <br>
+  <div class="row w3-right w3-margin-bottom" >
+    <button  type="submit" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-indigo">Cargar</button>
+  </div>
+  </form>
+</div>
+
+<div class="w3-container">
+  
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <h2>Carga de Archivo</h2>
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Carga exitosa.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#carga-clase" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Ir a Arriba</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Desarrollado por Rodri y Seba</p>
+</footer>
+ 
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
